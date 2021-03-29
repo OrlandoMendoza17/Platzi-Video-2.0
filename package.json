@@ -1,0 +1,27 @@
+{
+  "name": "platzi-video-2.0",
+  "version": "1.0.0",
+  "description": "Version 2.0 de Platzi-Video",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve",
+    "dev": "webpack"
+  },
+  "keywords": [
+    "Platzi-Video",
+    "React.js",
+    "webpack"
+  ],
+  "author": "Orlando Mendoza <ommv.17@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "5.2.0",
+    "html-loader": "2.1.2",
+    "html-webpack-plugin": "5.3.1",
+    "mini-css-extract-plugin": "1.4.0",
+    "style-loader": "2.0.0",
+    "webpack": "5.28.0",
+    "webpack-cli": "4.6.0",
+    "webpack-dev-server": "3.11.2"
+  }
+}
