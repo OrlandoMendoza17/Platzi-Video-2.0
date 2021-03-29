@@ -1,1 +1,2 @@
-console.log('Hola amigo mio')
+import './scss/main.scss';
+console.log('Hola amigo mio');
