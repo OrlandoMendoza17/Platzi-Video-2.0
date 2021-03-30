@@ -3,7 +3,8 @@
   padding: 10px;
   display: grid;
   grid-template-columns: 1fr auto;
-  // align-items: center;
+  align-content: center;
+  height: 100px;
   
   &__brand-logo{
     width: 150px;
@@ -17,7 +18,7 @@
   
   &__user-settings{
     position: relative;
-    color: #fff;
+    color: $primary-font-color;
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: 1fr;
