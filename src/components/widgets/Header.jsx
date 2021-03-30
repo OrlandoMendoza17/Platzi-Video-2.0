@@ -1,13 +1,17 @@
 import React from 'react';
-import brandLogo from '../../assets/images/logo-platzi-video-BW2.png';
-import userImage from '../../assets/images/user-icon.png';
+import brandLogo from '@images/logo-platzi-video-BW2.png';
+import userImage from '@images/user-icon.png';
 
 const Header = () =>(
   <div className="Header">
     <img className="Header__brand-logo" src={brandLogo} alt="brand-logo"/>
     <div className="Header__user-settings">
-      <img className="Header__user-settings--image" src={userImage} alt="brand-logo"/>
-      <span className="Header__user-settings--name">Usuario</span>
+      <img className="Header__user-settings--image" src={userImage} alt="user-image"/>
+      <span className="Header__user-settings--name">Perfil</span>
+      <ul className="Header__user-settings--options">
+        <li>Cuenta</li>
+        <li>Cerrar Sesión</li>
+      </ul>
     </div>
   </div>
 )

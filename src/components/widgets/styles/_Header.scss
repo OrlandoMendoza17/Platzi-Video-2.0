@@ -1,15 +1,76 @@
 .Header{
-  // background-color: $brand-color;
-  background-color: red;
+  background-color: $brand-color;
   padding: 10px;
   display: grid;
   grid-template-columns: 1fr auto;
-  align-items: center;
+  // align-items: center;
   
   &__brand-logo{
-    width: 200px;
+    width: 150px;
+    @media screen and (min-width: 480px){
+      width: 200px;
+    }
+    @media screen and (min-width: 768px){
+      margin-left: 20px;
+    }
   }
-  &__user-image{
-    width: 40px;
+  
+  &__user-settings{
+    position: relative;
+    color: #fff;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    
+    @media screen and (min-width: 768px){
+      margin-right: 20px;
+    }
+    
+    &:hover &--options{
+      display: block;
+    }
+    
+    &--image{
+      width: 40px;
+    }
+    
+    &--options{
+      margin-top: 10px;
+      transform: translateX(5px);
+      display: none;
+      position: absolute;
+      top: 50px;
+      right: 0;
+      width: 110px;
+      text-align: right;
+      border-radius: 5px;
+      background-color: rgba(0,0,0,0.5);
+      animation-name: upDown;
+      animation-duration: .3s;
+      animation-timing-function: ease-in;
+      animation-fill-mode: forwards;
+      
+    }
+    &--options li{
+      padding: 5px;
+      border-radius: 5px;
+    }
+    &--options li:hover{
+      background-color: rgba(0, 255, 255, 0.75);
+    }
+  }
+}
+
+@keyframes upDown{
+  from{
+    margin-top: 0px;
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+    margin-top: 10px;
   }
 }
