@@ -1,15 +1,17 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-// const CopyWebpackPlugin = require('copy-webpack-plugin');
+// const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 // const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
   output:{
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js'
+    filename: '[name].js',
+    publicPath: '/',
   },
+  context: __dirname,
   mode: 'development',
   devtool: 'source-map',
   devServer:{
@@ -17,7 +19,7 @@ module.exports = {
     historyApiFallback: true,
     compress: true,
     open: true,
-    port: 9000,
+    port: 3006,
   },
   resolve:{
     extensions: ['.js', '.jsx']
@@ -25,13 +27,17 @@ module.exports = {
   module:{
     rules:[
       {
-        test: /\.(js|jsx)$/i,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: 'babel-loader'
+        use: {
+          loader: 'babel-loader'
+        }
       },
       {
         test: /\.html$/,
-        use: 'html-loader'
+        use: [
+          {loader: 'html-loader'}
+        ]
       },
       {
         test: /\.s?css$/i,
@@ -72,11 +78,11 @@ module.exports = {
     //     }
     //   ]
     // }),
-    new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns:[
-        path.resolve(__dirname, 'dist/**')
-      ]
-    }),
+    // new CleanWebpackPlugin({
+    //   cleanOnceBeforeBuildPatterns:[
+    //     path.resolve(__dirname, 'dist/**')
+    //   ]
+    // }),
     new HtmlWebpackPlugin({
       inject: 'body',
       template: path.resolve(__dirname, 'public/index.html'),

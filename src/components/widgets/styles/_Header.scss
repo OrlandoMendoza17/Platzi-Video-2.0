@@ -1,8 +1,15 @@
 .Header{
-  background-color: black;
+  // background-color: $brand-color;
+  background-color: red;
   padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
   
   &__brand-logo{
     width: 200px;
+  }
+  &__user-image{
+    width: 40px;
   }
 }
