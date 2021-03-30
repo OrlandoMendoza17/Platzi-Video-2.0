@@ -1,8 +1,9 @@
 import React from 'react';
-import Saludo from '../components/UI/Saludo';
+import Header from '../components/widgets/header';
+
 
 const Home = () =>(
-  <Saludo/>
+  <Header/>  
 )
 
 export default Home;
