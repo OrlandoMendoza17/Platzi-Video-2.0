@@ -1,12 +1,15 @@
 import React from 'react';
-import Header from '@components/widgets/Header';
 import Searcher from '@components/widgets/Searcher';
+import Category from '@components/UI/Category';
+import Layout from '@components/UI/Layout';
 
 const Home = () =>(
-  <>
-    <Header/>
+  <Layout>
     <Searcher/>
-  </>
+    <Category/>
+    <Category/>
+    <Category/>
+  </Layout>
 )
 
 export default Home;

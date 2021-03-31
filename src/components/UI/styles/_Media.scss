@@ -1,0 +1,25 @@
+.Media{
+  $Media-border-radius: 20px;
+  border-radius: $Media-border-radius;  
+  height: 250px;
+  width: 200px;
+  background-color: rgba(0,0,0,0.5);
+  transform-origin: left center;
+  // transform-origin: left top;
+  transition: .3s;
+  
+  &__image{
+    border-radius: $Media-border-radius;  
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  &__details{
+    
+  }
+  
+  &:hover ~ .Media{
+    transform: translateX(100px);
+  }
+}

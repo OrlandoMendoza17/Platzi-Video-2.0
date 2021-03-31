@@ -1,0 +1,22 @@
+.Playlist{
+  padding: 0px;
+  padding-bottom: 10px;
+  height: 270px;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: left;
+  align-content: center;
+  transition: .3s;
+  gap: 15px;
+  
+  &:hover{
+    height: 420px;
+  }
+  &:hover .Media{
+    opacity: .3;
+  }
+  &:hover .Media:hover{
+    transform: scale(1.5);
+    opacity: 1;
+  }
+}

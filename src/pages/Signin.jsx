@@ -1,9 +1,10 @@
 import React from 'react';
+import Layout from '@components/UI/Layout';
 
 const Home = () =>(
-  <div>
+  <Layout>
     Signin
-  </div>
+  </Layout>
 )
 
 export default Home;

@@ -2,8 +2,12 @@
 @import './lib/reset';
 
 //UI Components Styles
-@import '../components/UI/styles/Saludo';
+@import '@components/UI/styles/Layout';
+@import '@components/UI/styles/Category';
+@import '@components/UI/styles/Playlist';
+@import '@components/UI/styles/Media';
 
 //Widgets Styles
 @import '@components/widgets/styles/Header';
 @import '@components/widgets/styles/Searcher';
+@import '@components/widgets/styles/Footer';
