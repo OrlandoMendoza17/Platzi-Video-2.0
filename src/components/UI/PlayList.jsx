@@ -1,20 +1,13 @@
 import React from 'react';
 import Media from './Media';
 
-const Playlist =() =>(
+const Playlist = ({playlist}) =>(
   <div className="Playlist">
-    <Media/>
-    <Media/>
-    <Media/>
-    <Media/>
-    <Media/>
-    <Media/>
-    <Media/>
-    <Media/>
-    <Media/>
-    <Media/>
-    <Media/>
-    <Media/>
+    {
+      playlist.map((media)=>(
+        <Media details={media} key={media.id}/>
+      ))
+    }
   </div>
 )
 

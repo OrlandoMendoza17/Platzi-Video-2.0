@@ -4,13 +4,15 @@
   box-sizing: border-box;
   font-family: 'Muli', sans-serif;
 }
-
 html{
   font-size: 62.5%;
 }  
 body{
   font-size: 1.6rem;
   background-color: $brand-color;
+}
+input, button{
+  outline: 0;
 }
 ul, ol{
   padding: 0;

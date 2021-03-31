@@ -1,11 +1,11 @@
 import React from 'react';
 import Playlist from './PlayList';
 
-const Category = () =>(
+const Category = ({category}) =>(
   <section className="Category">
-    <h3 className="Category__title">Mi lista</h3>
+    <h3 className="Category__title">{category.title}</h3>
     <div className="Category__playlist">
-      <Playlist/>
+      <Playlist playlist={category.playlist}/>
     </div>
   </section>
 )
