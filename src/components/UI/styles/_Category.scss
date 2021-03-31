@@ -3,28 +3,8 @@
   color: $primary-font-color;
   
   &__playlist{
+    padding-bottom: 15px;
     overflow-x: auto;
-    margin-top: 10px;
-    padding: 0px;
-    padding-bottom: 10px;
-    // height: 280px;
-    display: grid;
-    grid-auto-flow: column;
-    justify-content: left;
-    align-content: center;
-    transition: .3s;
-    gap: 15px;
-    
-    &:hover{
-      // height: 420px !important;
-    }
-    &:hover .Media{
-      opacity: .3;
-    }
-    &:hover .Media:hover{
-      transform: scale(1.5);
-      opacity: 1;
-    }
     
     &::-webkit-scrollbar {
       height: 15px;

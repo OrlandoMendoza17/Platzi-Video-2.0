@@ -1,3 +1,8 @@
 .Layout main{
-  min-height: calc(100vh - 160px);
+  min-height: calc(100vh - 180px);
+  margin-bottom: 20px;
 }
+
+//header and footer height = 160px
+//margin-bottom = 20px
+//160px + 20px = 180px
