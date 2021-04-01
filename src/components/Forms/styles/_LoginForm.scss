@@ -1,0 +1,14 @@
+.LoginForm{
+  padding: 15px;
+  border: 1px solid black;
+  
+  &__Form{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    
+    &--input{
+      width: 100%;
+    }
+  }
+}

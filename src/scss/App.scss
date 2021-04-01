@@ -1,6 +1,9 @@
 @import './lib/variables';
 @import './lib/reset';
 
+//Forms Components Styles
+@import '@components/Forms/styles/LoginForm';
+
 //UI Components Styles
 @import '@components/UI/styles/Layout';
 @import '@components/UI/styles/Category';
@@ -11,3 +14,4 @@
 @import '@components/widgets/styles/Header';
 @import '@components/widgets/styles/Searcher';
 @import '@components/widgets/styles/Footer';
+@import '@components/widgets/styles/SubmitButton';
