@@ -1,14 +1,29 @@
 .LoginForm{
-  padding: 15px;
-  border: 1px solid black;
+  min-width: 440px;
+  border: 2px solid $primary-font-color;
+  border-radius: 40px;
+  padding: 40px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  color: $primary-font-color;
   
+  &__title{
+    padding: 10px 0 40px 0;
+    font-size: 2.4rem;
+  }
   &__Form{
     display: grid;
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 20px;
     
     &--input{
+      padding: 15px;
+      font-size: 1.6rem;
       width: 100%;
+      border-bottom: 2px solid $primary-font-color;
+      
+      &::placeholder{
+        color: $primary-font-color;
+      }
     }
   }
 }

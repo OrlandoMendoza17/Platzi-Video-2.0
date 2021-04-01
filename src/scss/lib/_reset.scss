@@ -12,6 +12,15 @@ body{
 }
 input, button{
   outline: 0;
+  background: transparent;
+  border: none;
+  color: $primary-font-color;
+}
+button{
+  cursor: pointer;
+}
+a{
+  color: $primary-font-color;
 }
 ul, ol{
   padding: 0;
