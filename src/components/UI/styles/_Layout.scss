@@ -1,10 +1,19 @@
 .Layout main{
   min-height: calc(100vh - 180px);
   margin-bottom: 20px;
+  
+  &.justify-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &.justify-grid{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+  }
 }
 .Layout{
-  
-  
   &.purple{
     background-color: $brand-color;
   }
