@@ -1,10 +1,10 @@
 import React from 'react';
 import Layout from '@components/UI/Layout';
 
-const Home = () =>(
+const Signin = () =>(
   <Layout>
     Signin
   </Layout>
 )
 
-export default Home;
+export default Signin;

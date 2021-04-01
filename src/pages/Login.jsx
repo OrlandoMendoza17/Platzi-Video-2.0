@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Layout from '@components/UI/Layout';
 import LoginForm from '@components/Forms/LoginForm';
 
-class Home extends Component{
+class Login extends Component{
   
   state = {
     form:{
@@ -11,7 +11,8 @@ class Home extends Component{
     }
   }
   
-  handleSubmit = () =>{
+  handleSubmit = (event) =>{
+    event.preventDefault()
     const { form } = this.state
     
     console.log(form.email)
@@ -27,7 +28,7 @@ class Home extends Component{
   render(){
     const { handleChange, handleSubmit, state:{ form }} = this
     return(
-      <Layout color="gradient">
+      <Layout color="gradient" justify="justify-flex">
         <LoginForm 
           form={form}
           handleSubmit={handleSubmit}
@@ -38,4 +39,4 @@ class Home extends Component{
   }
 }
 
-export default Home;
+export default Login;
