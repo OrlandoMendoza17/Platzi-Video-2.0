@@ -1,4 +1,7 @@
 $brand-color: #8f57fd;
-$brand-secondary-color: rgba(0, 255, 255, 0.75);
+$brand-secondary-color: rgb(0, 195, 255);
 
+$brand-select-color: rgb(0, 255, 255);
+
+$brand-color-gradient: linear-gradient(to top, $brand-color 0%, $brand-secondary-color 100%);
 $primary-font-color: #fff;

@@ -7,7 +7,7 @@ import {categories} from '../assets/categories.json';
 console.log(categories)
 
 const Home = () =>(
-  <Layout>
+  <Layout color="purple">
     <Searcher/>
     {
       categories.map((category)=>(

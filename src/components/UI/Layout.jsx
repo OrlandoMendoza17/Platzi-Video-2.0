@@ -2,13 +2,11 @@ import React from 'react';
 import Header from '@components/widgets/Header';
 import Footer from '@components/widgets/Footer';
 
-const Layout = (props) =>(
-  <div className="Layout">
+const Layout = ({color, children}) =>(
+  <div className={`Layout ${color}`}>
     <Header/>
     <main>
-      {
-        props.children
-      }
+      { children }
     </main>
     <Footer/>
   </div>
