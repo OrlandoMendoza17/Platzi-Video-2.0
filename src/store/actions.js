@@ -1,4 +1,4 @@
-import ADD_TO_MYLIST from '@store/actionTypes';
+import {ADD_TO_MYLIST} from '@store/actionTypes';
 
 export const addMedia = (media) =>{
   return {

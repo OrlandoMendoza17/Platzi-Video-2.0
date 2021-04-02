@@ -9,6 +9,7 @@ const Home = ({myList, categories}) =>(
   <Layout color="purple">
     <Searcher/>
     {
+      !!myList.playlist.length &&
       <Category {...myList}/>
     }
     {

@@ -14,8 +14,8 @@ const { categories } = medias;
 const initialState = {
   categories,
   myList: {
-    title: 'Mi Lista Bonita es',
-    playlist: categories[0].playlist,
+    title: 'Mi Lista',
+    playlist: [],
   },
 }
 

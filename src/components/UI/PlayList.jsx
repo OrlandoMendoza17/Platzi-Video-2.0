@@ -6,7 +6,7 @@ const Playlist = ({playlist}) =>(
   <div className="Playlist">
     {
       playlist.map((media)=>(
-        <Media {...media} key={media.id}/>
+        <Media media={media} key={media.id}/>
       ))
     }
   </div>
