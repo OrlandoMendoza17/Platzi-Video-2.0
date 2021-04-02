@@ -32,7 +32,7 @@ class Login extends Component{
   render(){
     const { handleChange, handleSubmit, state:{ form }} = this
     return(
-      <Layout color="gradient" justify="justify-flex">
+      <Layout page="Login" color="gradient" justify="justify-flex">
         <FormatForm title="Inicia Sesión">
           <LoginForm 
             form={form}
@@ -40,7 +40,6 @@ class Login extends Component{
             handleChange={handleChange}
           />
         </FormatForm>
-        
       </Layout>
     )
   }

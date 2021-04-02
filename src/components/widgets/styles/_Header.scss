@@ -6,12 +6,16 @@
   height: 100px;
   
   &__brand-logo{
-    width: 150px;
-    @media screen and (min-width: 480px){
-      width: 200px;
-    }
-    @media screen and (min-width: 768px){
-      margin-left: 20px;
+    justify-self: start;
+    
+    &--image{
+      width: 150px;
+      @media screen and (min-width: 480px){
+        width: 200px;
+      }
+      @media screen and (min-width: 768px){
+        margin-left: 20px;
+      }
     }
   }
   
@@ -52,17 +56,26 @@
       animation-duration: .3s;
       animation-timing-function: ease-in;
       animation-fill-mode: forwards;
-      
     }
     &--options li{
       padding: 5px;
       border-radius: 5px;
     }
     &--options li:hover{
-      color: rgba(0,0,0,0.75);
-      background-color: rgba(0, 255, 255, 1);
+      color: $black-strong-transparent;
+      background-color: $brand-select-color;
     }
   }
+  
+  &__start-session{
+    justify-self: center;
+    align-self: center;
+    
+    @media screen and (min-width: 768px){
+      margin-right: 20px;
+    }
+  }
+  
 }
 
 @keyframes upDown{
