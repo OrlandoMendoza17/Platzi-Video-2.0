@@ -2,19 +2,26 @@ import React from 'react';
 import Searcher from '@components/widgets/Searcher';
 import Category from '@components/UI/Category';
 import Layout from '@components/UI/Layout';
-import {categories} from '../assets/categories.json';
+import videos from '../assets/categories.json';
+// import PropTypes from 'prop-types';
 
-console.log(categories)
 
-const Home = () =>(
-  <Layout color="purple">
-    <Searcher/>
-    {
-      categories.map((category)=>(
-        <Category category={category} key={category.id}/>
-      ))
-    }
-  </Layout>
-)
+const Home = () =>{
+  const { categories } = videos;
+  return(
+    <Layout color="purple">
+      <Searcher/>
+      {
+        categories.map((category)=>(
+          <Category {...category} key={category.id}/>
+        ))
+      }
+    </Layout>
+  )
+}
+
+// Home.propTypes = {
+  
+// }
 
 export default Home;
