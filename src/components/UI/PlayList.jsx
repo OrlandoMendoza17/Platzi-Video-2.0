@@ -2,11 +2,15 @@ import React from 'react';
 import Media from './Media';
 import PropTypes from 'prop-types';
 
-const Playlist = ({playlist}) =>(
+const Playlist = ({type, playlist}) =>(
   <div className="Playlist">
     {
       playlist.map((media)=>(
-        <Media media={media} key={media.id}/>
+        <Media 
+          type={type} 
+          media={media} 
+          key={media.id}
+        />
       ))
     }
   </div>
