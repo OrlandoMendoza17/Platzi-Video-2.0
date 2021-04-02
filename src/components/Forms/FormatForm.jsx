@@ -1,6 +1,5 @@
 import React from 'react';
-import Input from '@components/widgets/Input';
-import SubmitButton from '@components/widgets/SubmitButton';
+import PropTypes from 'prop-types';
 
 const FormatForm = ({title, children}) =>(
   <div className="FormatForm">
@@ -10,5 +9,9 @@ const FormatForm = ({title, children}) =>(
     }
   </div>
 )
+
+FormatForm.propTypes = {
+  title: PropTypes.string
+}
 
 export default FormatForm;

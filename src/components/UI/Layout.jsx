@@ -14,7 +14,9 @@ const Layout = ({page, color, children, justify}) =>(
 )
 
 Layout.propTypes = {
-  page: PropTypes.oneOf(['Login'])
+  color: PropTypes.string,
+  justify: PropTypes.string,
+  page: PropTypes.oneOf(['Login']),
 }
 
 export default Layout; 

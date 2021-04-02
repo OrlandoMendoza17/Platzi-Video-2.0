@@ -4,10 +4,11 @@ import CheckBox from '@components/widgets/CheckBox';
 import SubmitButton from '@components/widgets/SubmitButton';
 import google from '../../assets/images/google-icon.png';
 import twitter from '../../assets/images/twitter-icon.png';
+import PropTypes from 'prop-types';
 
 import {Link} from 'react-router-dom';
 
-const LoginForm = ({handleChange, handleSubmit, handleInvalid, form, children}) =>(
+const LoginForm = ({handleChange, handleSubmit, handleInvalid, form}) =>(
   <>
     <form className="FormatForm__Form" onSubmit={handleSubmit} onInvalid={handleInvalid}>
       <Input 
@@ -64,5 +65,12 @@ const LoginForm = ({handleChange, handleSubmit, handleInvalid, form, children}) 
     </section>
   </>
 )
+
+LoginForm.propTypes = {
+  handleInvalid: PropTypes.func,
+  form: PropTypes.object.isRequired,
+  handleChange: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
+}
 
 export default LoginForm;

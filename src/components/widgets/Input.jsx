@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Input = ({type, name, autoComplete, value, required, className, placeholder, handleChange, multiple}) =>(
   <label htmlFor={name}>
@@ -16,5 +17,18 @@ const Input = ({type, name, autoComplete, value, required, className, placeholde
     />
   </label>
 )
+
+Input.propTypes = {
+  label: PropTypes.string,
+  className: PropTypes.string,
+  placeholder: PropTypes.string,
+  multiple: PropTypes.bool,
+  required: PropTypes.bool,
+  autoComplete: PropTypes.bool,
+  type: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  handleChange: PropTypes.func.isRequired,
+}
 
 export default Input;

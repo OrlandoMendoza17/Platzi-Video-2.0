@@ -1,6 +1,6 @@
 import React from 'react';
 import Playlist from './PlayList';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 const Category = ({title, playlist}) =>(
   <section className="Category">
