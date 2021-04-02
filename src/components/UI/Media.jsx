@@ -4,7 +4,7 @@ import addButton from '@images/plus-icon.svg';
 import removeButton from '@images/remove-icon.svg';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import {addMedia} from '../../store/actions';
+import {addMedia, removeMedia} from '../../store/actions';
 
 const Media = ({ type, media, dispatch }) =>{
   const {title, image, year, ageRate, duration} = media
@@ -14,7 +14,7 @@ const Media = ({ type, media, dispatch }) =>{
   }
   
   const handleRemoveMedia = () =>{
-    // dispatch(removeMedia(media))
+    dispatch(removeMedia(media))
   }
   
   return(
@@ -24,10 +24,10 @@ const Media = ({ type, media, dispatch }) =>{
         <div className="Media__details--buttons">
           <img className="MediaButton" src={playButton} alt="play-icon"/>
           {
-            type === 'user' ?
-              <img className="MediaButton" onClick={()=>{alert('Hola')}} src={removeButton} alt="plus-icon"/>
-            :
+            type !== 'user' ?
               <img className="MediaButton" onClick={handleAddMedia} src={addButton} alt="plus-icon"/>
+            :
+              <img className="MediaButton" onClick={handleRemoveMedia} src={removeButton} alt="plus-icon"/>
           }
         </div>
         <p className="Media__details--title">{title}</p>

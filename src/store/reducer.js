@@ -1,11 +1,10 @@
-import {ADD_TO_MYLIST} from '@store/actionTypes';
+import {ADD_TO_MYLIST, REMOVE_FROM_MYLIST} from '@store/actionTypes';
 
 const reducer = (state, action) =>{
+  const { myList:{ playlist }} = state;
   
   switch(action.type){
-    
     case ADD_TO_MYLIST: 
-      const { myList:{ playlist }} = state;
       
       // (!playlist.includes( media => media.id === action.payload.id ))
       //   ? playlist.push(action.payload)
@@ -28,6 +27,20 @@ const reducer = (state, action) =>{
         myList: {
           ...state.myList,
           playlist,
+        }
+      }
+      break;
+    case REMOVE_FROM_MYLIST:
+      
+      const newPlaylist = playlist.filter(media =>{
+        return media.id !== action.payload.id
+      })
+      
+      state = {
+        ...state,
+        myList: {
+          ...state.myList, 
+          playlist: newPlaylist
         }
       }
       break;
