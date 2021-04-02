@@ -5,7 +5,6 @@ import Layout from '@components/UI/Layout';
 import videos from '../assets/categories.json';
 // import PropTypes from 'prop-types';
 
-
 const Home = () =>{
   const { categories } = videos;
   return(
