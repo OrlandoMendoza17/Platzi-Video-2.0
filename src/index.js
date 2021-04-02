@@ -8,6 +8,7 @@ import { Provider } from 'react-redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import logger from 'redux-logger';
 import reducer from '@store/reducer';
+import {getMyList} from '@utils/localStorage';
 
 const { categories } = medias;
 
@@ -15,7 +16,7 @@ const initialState = {
   categories,
   myList: {
     title: 'Mi Lista',
-    playlist: [],
+    playlist: getMyList() || [],
   },
 }
 
