@@ -12,15 +12,18 @@ import reducer from '@store/reducer';
 const { categories } = medias;
 
 const initialState = {
-  myList: ['Hola'],
-  categories
+  categories,
+  myList: {
+    title: 'Mi Lista Bonita es',
+    playlist: categories[0].playlist,
+  },
 }
 
 const store = createStore(
   reducer,
   initialState,
   composeWithDevTools(
-    applyMiddleware( logger )  
+    applyMiddleware(logger)  
   )
 )
 
