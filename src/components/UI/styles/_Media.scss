@@ -21,7 +21,6 @@
     right: 0;
     bottom: 0;
     left: 0;
-    opacity: 0;
     transition: .3s;
     border-radius: $Media-border-radius;  
     // background-image: linear-gradient(0deg, #2196f3, rgba(0, 0, 0, 0));
@@ -39,11 +38,16 @@
     }
   }
   
-  &:hover &__details{
-    opacity: 1;
-  }
-  &:hover ~ .Media{
-    transform: translateX(100px);
+  @media screen and (min-width: 992px){
+    &__details{
+      opacity: 0;
+    }
+    &:hover &__details{
+      opacity: 1;
+    }
+    &:hover ~ .Media{
+      transform: translateX(100px);
+    }
   }
 }
 

@@ -9,16 +9,16 @@
   transition: .3s;
   gap: 15px;
   
-  &:hover{
-    height: 420px;
+  @media screen and (min-width: 992px){
+    &:hover{
+      height: 420px;
+    }
+    &:hover .Media{
+      opacity: .3;
+    }
+    &:hover .Media:hover{
+      transform: scale(1.5);
+      opacity: 1;
+    }
   }
-  &:hover .Media{
-    opacity: .3;
-  }
-  &:hover .Media:hover{
-    transform: scale(1.5);
-    opacity: 1;
-  }
-  
-  
 }
