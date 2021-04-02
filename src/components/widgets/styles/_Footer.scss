@@ -3,8 +3,8 @@
   
   &__list {
     display: grid;
-    grid-template-columns: repeat(3, auto);
-    justify-content: left;
+    grid-template-columns: 1fr;
+    justify-content: center;
     gap: 15px;
     
     li a{
@@ -14,6 +14,12 @@
       &:hover{
         text-decoration: underline;
       }
+    }
+    @media screen and(min-width: 576px){
+      grid-template-columns: repeat(3, auto);
+    }
+    @media screen and(min-width: 768px){
+      justify-content: left;
     }
   }
 }

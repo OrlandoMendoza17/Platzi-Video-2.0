@@ -1,19 +1,28 @@
 .FormatForm{
-  min-width: 440px;
-  border: 2px solid $primary-font-color;
+  min-width: 320px;
   border-radius: 40px;
-  padding: 40px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  padding: 40px 20px;
   color: $primary-font-color;
   
+  @media screen and (min-width: 576px){
+    min-width: 440px;
+    padding: 40px;
+    border: 2px solid $primary-font-color;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+
   &__title{
     padding: 10px 0 40px 0;
     font-size: 2.4rem;
   }
   &__Form{
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(280px, 480px);
     gap: 20px;
+    
+    @media screen and (min-width: 576px){
+      grid-template-columns: 1fr;
+    }
     
     &--input{
       padding: 15px;

@@ -2,6 +2,7 @@ import React from 'react';
 import Input from '@components/widgets/Input';
 import SubmitButton from '@components/widgets/SubmitButton';
 import {Link} from 'react-router-dom';
+import LoginButton from '@components/UI/LoginButton';
 
 const SigninForm = ({handleChange, handleSubmit, handleInvalid, form, children}) =>(
   <>
@@ -37,11 +38,6 @@ const SigninForm = ({handleChange, handleSubmit, handleInvalid, form, children})
         Registrarme
       </SubmitButton>
     </form>
-    <section className="FormatForm__Links center">
-      <Link to="/Login">
-        Iniciar Sesión
-      </Link>
-    </section>
   </>
 )
 
