@@ -13,6 +13,10 @@ import {getMyList} from '@utils/localStorage';
 const { categories } = medias;
 
 const initialState = {
+  search: {
+    title: 'Busqueda',
+    playlist: []
+  },
   categories,
   myList: {
     title: 'Mi Lista',

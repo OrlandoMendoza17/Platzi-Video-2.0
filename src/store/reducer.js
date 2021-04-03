@@ -1,4 +1,4 @@
-import {ADD_TO_MYLIST, REMOVE_FROM_MYLIST} from '@store/actionTypes';
+import {ADD_TO_MYLIST, REMOVE_FROM_MYLIST, SEARCH_A_MEDIA} from '@store/actionTypes';
 import {saveMyList} from '@utils/localStorage';
 
 const reducer = (state, action) =>{
@@ -11,12 +11,12 @@ const reducer = (state, action) =>{
       //   : null
       debugger
       
-      const itDoes = playlist.find( media => {
+      const itsNotAdded = !playlist.find( media => {
         debugger
         return media.id === action.payload.id
       }) 
       
-      if(!itDoes){
+      if(itsNotAdded){
         playlist.push(action.payload)
       }else{
         
@@ -33,7 +33,7 @@ const reducer = (state, action) =>{
       saveMyList(playlist)
       
       break;
-    case REMOVE_FROM_MYLIST:      
+    case REMOVE_FROM_MYLIST:
       const newPlaylist = playlist.filter(media =>{
         return media.id !== action.payload.id
       })
@@ -49,6 +49,29 @@ const reducer = (state, action) =>{
       saveMyList(newPlaylist)
       
       break;
+    case SEARCH_A_MEDIA:
+      const { categories } = state;
+      const searchLowerCase = action.payload.toLowerCase()  
+    
+      const searchResult = categories.map(({playlist}) =>{
+        debugger
+        return playlist.filter(media =>{
+          const titleLowerCase = media.title.toLowerCase()
+          return titleLowerCase.includes(searchLowerCase)
+        })
+      }).flat()
+      
+      debugger
+      
+      state = {
+        ...state,
+        search: {
+          ...state.search,
+          playlist: !!searchLowerCase? searchResult : []
+        }
+      }
+      break;
+      
     default: 
       state = { ...state }
       break;

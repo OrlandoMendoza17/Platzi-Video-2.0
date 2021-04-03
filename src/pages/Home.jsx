@@ -1,23 +1,26 @@
 import React from 'react';
 import Searcher from '@components/widgets/Searcher';
-import Category from '@components/UI/Category';
 import Layout from '@components/UI/Layout';
 import {connect} from 'react-redux';
+import MyList from '../components/UI/MyList';
+import Categories from '../components/UI/Categories';
+import Searches from '../components/UI/Searches';
 // import PropTypes from 'prop-types';
 
-const Home = ({myList, categories}) =>{
+const Home = ({search, myList, categories}) =>{
+  debugger
   return(
     <Layout color="purple">
       <Searcher/>
       {
-        !!myList.playlist.length &&
-        <Category type='user' {...myList} />
-      }
-      {
-        categories.map((category)=>(
-          <Category type='category' {...category} key={category.id}/>
-        ))
-      }
+        !!search.playlist.length?
+          <Searches {...search}/>
+        :
+          <>
+            <MyList myList={myList}/>      
+            <Categories categories={categories}/>
+          </>
+      }  
     </Layout>
   )
 }
@@ -26,7 +29,8 @@ const Home = ({myList, categories}) =>{
   
 // }
 
-const mapStateToProps = ({myList, categories}) =>({
+const mapStateToProps = ({search, myList, categories}) =>({
+  search,
   myList,
   categories,
 })

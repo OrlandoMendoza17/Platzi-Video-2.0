@@ -7,7 +7,7 @@
         {
           "id": 1,
           "image": "https://images.pexels.com/photos/789822/pexels-photo-789822.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=750&w=1260",
-          "title": "Titulo descriptivo",
+          "title": "Leonidas Esteban",
           "ageRate": "16+",
           "year": "2020",
           "duration": "114 minutos"
@@ -15,7 +15,7 @@
         {
           "id": 2,
           "image": "https://images.pexels.com/photos/1427741/pexels-photo-1427741.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=750&w=1260",
-          "title": "Titulo descriptivo",
+          "title": "Platzi",
           "ageRate": "16+",
           "year": "2020",
           "duration": "114 minutos"
@@ -23,7 +23,7 @@
         {
           "id": 3,
           "image": "https://images.pexels.com/photos/705792/pexels-photo-705792.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-          "title": "Titulo descriptivo",
+          "title": "Unitec",
           "ageRate": "16+",
           "year": "2020",
           "duration": "114 minutos"
@@ -31,7 +31,7 @@
         {
           "id": 4,
           "image": "https://images.pexels.com/photos/904276/pexels-photo-904276.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-          "title": "Titulo descriptivo",
+          "title": "Orlando Mendoza",
           "ageRate": "16+",
           "year": "2020",
           "duration": "114 minutos"
@@ -39,7 +39,7 @@
         {
           "id": 5,
           "image": "https://images.pexels.com/photos/1172207/pexels-photo-1172207.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&w=500",
-          "title": "Titulo descriptivo",
+          "title": "Marietsy Mendoza",
           "ageRate": "16+",
           "year": "2020",
           "duration": "114 minutos"
@@ -55,7 +55,7 @@
         {
           "id": 7,
           "image": "https://images.pexels.com/photos/1666779/pexels-photo-1666779.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-          "title": "Titulo descriptivo",
+          "title": "Freddy Vega",
           "ageRate": "16+",
           "year": "2020",
           "duration": "114 minutos"

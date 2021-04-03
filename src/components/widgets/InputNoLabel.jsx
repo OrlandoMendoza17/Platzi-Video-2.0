@@ -1,0 +1,32 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const InputNoLabel = ({type, name, autoComplete, value, required, className, placeholder, handleChange, multiple}) =>(
+  <input 
+    className={className}
+    placeholder={placeholder}
+    onChange={handleChange}
+    type={type}
+    name={name}
+    id={name}
+    value={value}
+    multiple={multiple}
+    autoComplete={autoComplete}
+    required={required || false}
+  />
+)
+
+InputNoLabel.propTypes = {
+  label: PropTypes.string,
+  className: PropTypes.string,
+  placeholder: PropTypes.string,
+  multiple: PropTypes.bool,
+  required: PropTypes.bool,
+  autoComplete: PropTypes.bool,
+  type: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  handleChange: PropTypes.func.isRequired,
+}
+
+export default InputNoLabel;

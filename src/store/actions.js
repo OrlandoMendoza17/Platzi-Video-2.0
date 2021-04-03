@@ -1,4 +1,4 @@
-import {ADD_TO_MYLIST, REMOVE_FROM_MYLIST} from '@store/actionTypes';
+import {ADD_TO_MYLIST, REMOVE_FROM_MYLIST, SEARCH_A_MEDIA} from '@store/actionTypes';
 
 export const addMedia = (media) =>{
   return {
@@ -11,5 +11,12 @@ export const removeMedia = (media) =>{
   return {
     type: REMOVE_FROM_MYLIST,
     payload: media
+  }
+}
+
+export const searchMedia = (search) =>{
+  return {
+    type: SEARCH_A_MEDIA,
+    payload: search
   }
 }
