@@ -14,8 +14,9 @@ const { categories } = medias;
 
 const initialState = {
   search: {
+    input: false,
     title: 'Busqueda',
-    playlist: []
+    playlist: [],
   },
   categories,
   myList: {

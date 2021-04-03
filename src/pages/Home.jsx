@@ -2,9 +2,10 @@ import React from 'react';
 import Searcher from '@components/widgets/Searcher';
 import Layout from '@components/UI/Layout';
 import {connect} from 'react-redux';
-import MyList from '../components/UI/MyList';
-import Categories from '../components/UI/Categories';
-import Searches from '../components/UI/Searches';
+import MyList from '@components/UI/MyList';
+import Categories from '@components/UI/Categories';
+import Searches from '@components/UI/Searches';
+import NotFoundSearches from '@components/UI/NoFoundSearches';
 // import PropTypes from 'prop-types';
 
 const Home = ({search, myList, categories}) =>{
@@ -13,8 +14,11 @@ const Home = ({search, myList, categories}) =>{
     <Layout color="purple">
       <Searcher/>
       {
-        !!search.playlist.length?
+        search.input?
+          !!search.playlist.length?
           <Searches {...search}/>
+            :
+          <NotFoundSearches/>
         :
           <>
             <MyList myList={myList}/>      

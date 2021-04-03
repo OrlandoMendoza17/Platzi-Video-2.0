@@ -67,6 +67,7 @@ const reducer = (state, action) =>{
         ...state,
         search: {
           ...state.search,
+          input: !!searchLowerCase,
           playlist: !!searchLowerCase? searchResult : []
         }
       }

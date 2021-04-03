@@ -1,0 +1,21 @@
+.NotFoundSearches{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: $primary-font-color;
+  font-weight: bold;
+  font-size: 1.8rem;
+  
+  &__message{
+    margin-top: 20px;
+  }
+  
+  &__image{
+    max-width: 300px;
+    
+    img{
+      width: 100%;
+    }
+  }
+}
