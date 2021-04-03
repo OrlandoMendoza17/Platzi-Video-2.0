@@ -7,7 +7,7 @@ import {connect} from 'react-redux';
 import {addMedia, removeMedia} from '../../store/actions';
 
 const Media = ({ type, media, dispatch }) =>{
-  const {title, image, year, ageRate, duration} = media
+  const {title, image, year, contentRating, duration} = media
   
   const handleAddMedia = () =>{
     dispatch(addMedia(media))
@@ -31,7 +31,7 @@ const Media = ({ type, media, dispatch }) =>{
           }
         </div>
         <p className="Media__details--title">{title}</p>
-        <p className="Media__details--features">{year} {ageRate} {duration}</p>
+        <p className="Media__details--features">{year} {contentRating} {duration}</p>
       </div>
     </div>
   )

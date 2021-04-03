@@ -9,7 +9,6 @@ import NotFoundSearches from '@components/UI/NoFoundSearches';
 // import PropTypes from 'prop-types';
 
 const Home = ({search, myList, categories}) =>{
-  debugger
   return(
     <Layout color="purple">
       <Searcher/>

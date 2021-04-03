@@ -9,20 +9,20 @@ import {setCategoriesStore} from './store/actions';
 
 const App = ({dispatch, ...store}) =>{
   
-  const [categories, setCategories] = useState([])
+  // const [categories, setCategories] = useState([])
   
-  debugger
   
   useEffect(() => {
     
     fetch('http://localhost:3000/initalState')
       .then(response => response.json())
-      .then(data => setCategories(data))
+      .then(data => {
+        dispatch(setCategoriesStore(data))
+      })
     
   }, [])
 
-  console.log(categories)
-  dispatch(setCategoriesStore(categories))
+  // console.log(categories)
   
   return(
     <Router>

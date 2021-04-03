@@ -8,9 +8,11 @@ const reducer = (state, action) =>{
     
     case SET_CATEGORIES_STORE:
       
+      debugger
+    
       state = {
         ...state,
-        fakeApi: action.payload
+        categories: action.payload.categories
       }
       break;
     
