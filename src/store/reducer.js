@@ -1,10 +1,19 @@
-import {ADD_TO_MYLIST, REMOVE_FROM_MYLIST, SEARCH_A_MEDIA} from '@store/actionTypes';
+import {ADD_TO_MYLIST, REMOVE_FROM_MYLIST, SEARCH_A_MEDIA, SET_CATEGORIES_STORE} from '@store/actionTypes';
 import {saveMyList} from '@utils/localStorage';
 
 const reducer = (state, action) =>{
   const { myList:{ playlist }} = state;
   
   switch(action.type){
+    
+    case SET_CATEGORIES_STORE:
+      
+      state = {
+        ...state,
+        fakeApi: action.payload
+      }
+      break;
+    
     case ADD_TO_MYLIST: 
       // (!playlist.includes( media => media.id === action.payload.id ))
       //   ? playlist.push(action.payload)

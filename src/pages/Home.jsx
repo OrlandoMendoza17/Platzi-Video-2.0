@@ -33,10 +33,12 @@ const Home = ({search, myList, categories}) =>{
   
 // }
 
-const mapStateToProps = ({search, myList, categories}) =>({
-  search,
-  myList,
-  categories,
-})
+// const mapStateToProps = ({search, myList, categories}) =>({
+//   search,
+//   myList,
+//   categories,
+// })
 
-export default connect(mapStateToProps)(Home);
+// export default connect(mapStateToProps)(Home);
+
+export default Home;
