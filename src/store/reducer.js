@@ -1,4 +1,4 @@
-import {ADD_TO_MYLIST, REMOVE_FROM_MYLIST, SEARCH_A_MEDIA, SET_CATEGORIES_STORE} from '@store/actionTypes';
+import {ADD_TO_MYLIST, REMOVE_FROM_MYLIST, SEARCH_A_MEDIA, SET_CATEGORIES_STORE, FIND_VIDEO} from '@store/actionTypes';
 import {saveMyList} from '@utils/localStorage';
 
 const reducer = (state, action) =>{
@@ -6,17 +6,16 @@ const reducer = (state, action) =>{
   
   switch(action.type){
     
-    case SET_CATEGORIES_STORE:
-      
-      debugger
-    
+    case SET_CATEGORIES_STORE:    
       state = {
         ...state,
         categories: action.payload.categories
       }
       break;
     
-    case ADD_TO_MYLIST: 
+    case ADD_TO_MYLIST:{ 
+      const { myList:{ playlist }} = state;
+
       // (!playlist.includes( media => media.id === action.payload.id ))
       //   ? playlist.push(action.payload)
       //   : null
@@ -42,9 +41,11 @@ const reducer = (state, action) =>{
       }
       
       saveMyList(playlist)
-      
-      break;
+    }break;
+    
     case REMOVE_FROM_MYLIST:
+      const { myList:{ playlist }} = state;
+    
       const newPlaylist = playlist.filter(media =>{
         return media.id !== action.payload.id
       })
@@ -60,7 +61,8 @@ const reducer = (state, action) =>{
       saveMyList(newPlaylist)
       
       break;
-    case SEARCH_A_MEDIA:
+      
+    case SEARCH_A_MEDIA:{
       const { categories } = state;
       const searchLowerCase = action.payload.toLowerCase()  
     
@@ -82,7 +84,22 @@ const reducer = (state, action) =>{
           playlist: !!searchLowerCase? searchResult : []
         }
       }
-      break;
+    } break;
+ 
+    case FIND_VIDEO:{
+      debugger
+      const player = state.categories.map(playlist =>{
+        
+        debugger
+        console.log('hola')
+        // return playlist.filter(media => media.id === action.payload)
+      })
+      
+      state = {
+        ...state,
+         player: {}
+      }
+    } break;
       
     default: 
       state = { ...state }

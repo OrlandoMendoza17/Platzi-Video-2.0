@@ -5,6 +5,7 @@ import reducer from '@store/reducer';
 import {getMyList} from '@utils/localStorage';
 
 const initialState = {
+  player: {},
   search: {
     input: false,
     title: 'Busqueda',

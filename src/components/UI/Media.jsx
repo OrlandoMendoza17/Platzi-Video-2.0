@@ -5,9 +5,10 @@ import removeButton from '@images/remove-icon.svg';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {addMedia, removeMedia} from '../../store/actions';
+import {Link} from 'react-router-dom';
 
 const Media = ({ type, media, dispatch }) =>{
-  const {title, image, year, contentRating, duration} = media
+  const {title, image, year, contentRating, duration, id} = media
   
   const handleAddMedia = () =>{
     dispatch(addMedia(media))
@@ -22,7 +23,9 @@ const Media = ({ type, media, dispatch }) =>{
       <img className="Media__image" src={image} alt={title}/>
       <div className="Media__details">
         <div className="Media__details--buttons">
-          <img className="MediaButton" src={playButton} alt="play-icon"/>
+          <Link to={`/Player/${id}`}>
+            <img className="MediaButton" src={playButton} alt="play-icon"/>
+          </Link>
           {
             type !== 'user' ?
               <img className="MediaButton" onClick={handleAddMedia} src={addButton} alt="plus-icon"/>

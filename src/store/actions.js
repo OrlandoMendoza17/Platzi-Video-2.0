@@ -1,4 +1,4 @@
-import {ADD_TO_MYLIST, REMOVE_FROM_MYLIST, SEARCH_A_MEDIA, SET_CATEGORIES_STORE} from '@store/actionTypes';
+import {ADD_TO_MYLIST, REMOVE_FROM_MYLIST, SEARCH_A_MEDIA, SET_CATEGORIES_STORE, FIND_VIDEO} from '@store/actionTypes';
 
 export const addMedia = (media) =>{
   return {
@@ -25,5 +25,12 @@ export const setCategoriesStore = (categories) =>{
   return {
     type: SET_CATEGORIES_STORE,
     payload: categories
+  }
+}
+
+export const findVideo = (id) =>{
+  return {
+    type: FIND_VIDEO,
+    payload: id
   }
 }
