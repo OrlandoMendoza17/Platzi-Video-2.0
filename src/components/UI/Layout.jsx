@@ -4,7 +4,7 @@ import Footer from '@components/widgets/Footer';
 import PropTypes from 'prop-types';
 
 const Layout = ({page, color, children, justify}) =>(
-  <div className={`Layout ${color}`}>
+  <div className={`Layout ${color || 'purple'}`}>
     <Header page={page}/>
     <main className={`${justify || ''}`}>
       { children }

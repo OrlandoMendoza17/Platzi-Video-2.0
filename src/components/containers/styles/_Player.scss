@@ -1,0 +1,17 @@
+.Player{
+  
+  &__video{
+    position: absolute;
+    width: 100vw;  
+    height: 100vh;
+    object-fit: cover;
+    top: 0;  
+    left: 0;  
+  }
+  
+  &__back{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+  }
+}
