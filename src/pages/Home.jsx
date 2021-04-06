@@ -1,7 +1,6 @@
 import React from 'react';
 import Searcher from '@components/widgets/Searcher';
 import Layout from '@components/UI/Layout';
-import {connect} from 'react-redux';
 import MyList from '@components/UI/MyList';
 import Categories from '@components/UI/Categories';
 import Searches from '@components/UI/Searches';
@@ -14,10 +13,12 @@ const Home = ({search, myList, categories}) =>{
       <Searcher/>
       {
         search.input?
-          !!search.playlist.length?
+          (search.playlist.length > 0)?
           <Searches {...search}/>
             :
-          <NotFoundSearches/>
+          <NotFoundSearches>
+            No se encontraron resultados :(
+          </NotFoundSearches>
         :
           <>
             <MyList myList={myList}/>      
