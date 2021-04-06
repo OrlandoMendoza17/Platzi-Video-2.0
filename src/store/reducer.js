@@ -1,4 +1,4 @@
-import {ADD_TO_MYLIST, REMOVE_FROM_MYLIST, SEARCH_A_MEDIA, SET_CATEGORIES_STORE, FIND_VIDEO} from '@store/actionTypes';
+import {ADD_TO_MYLIST, REMOVE_FROM_MYLIST, SEARCH_A_MEDIA, SET_CATEGORIES_STORE, FIND_VIDEO, UNSET_VIDEO} from '@store/actionTypes';
 import {saveMyList} from '@utils/localStorage';
 
 const reducer = (state, action) =>{
@@ -88,16 +88,23 @@ const reducer = (state, action) =>{
  
     case FIND_VIDEO:{
       debugger
-      const player = state.categories.map(playlist =>{
-        
-        debugger
-        console.log('hola')
-        // return playlist.filter(media => media.id === action.payload)
-      })
+      
+      const player = state.categories.map(({playlist}) =>{
+        return playlist.filter(media => media.id === parseInt(action.payload, 10))
+      }).flat()[0]
+      
+      console.log(player)
       
       state = {
+        ...state, player
+      }
+    } break;
+    
+    case UNSET_VIDEO:{
+      debugger
+      state = {
         ...state,
-         player: {}
+        player: {}
       }
     } break;
       
