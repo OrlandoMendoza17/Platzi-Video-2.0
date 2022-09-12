@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import brandLogo from '@images/logo-platzi-video-BW2.png';
-import userImage from '@images/user-icon.png';
-import LoginButton from '@components/UI/LoginButton';
+import brandLogo from '../../assets/images/logo-platzi-video-BW2.png';
+import userImage from '../../assets/images/user-icon.png';
+import LoginButton from '../../components/UI/LoginButton';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 class Header extends Component{

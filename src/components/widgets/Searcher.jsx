@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import InputNoLabel from '@components/widgets/InputNoLabel';
-import {searchMedia} from '@store/actions';
+import InputNoLabel from '../../components/widgets/InputNoLabel';
+import {searchMedia} from '../../store/actions';
 import {connect} from 'react-redux';
 class Searcher extends Component {
   

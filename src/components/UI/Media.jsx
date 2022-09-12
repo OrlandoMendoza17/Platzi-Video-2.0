@@ -1,7 +1,7 @@
 import React from 'react';
-import playButton from '@images/play-icon.svg';
-import addButton from '@images/plus-icon.svg';
-import removeButton from '@images/remove-icon.svg';
+import playButton from '../../assets/images/play-icon.svg';
+import addButton from '../../assets/images/plus-icon.svg';
+import removeButton from '../../assets/images/remove-icon.svg';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {addMedia, removeMedia} from '../../store/actions';

@@ -1,6 +1,6 @@
 import React from 'react';
-import Layout from '@components/UI/Layout';
-import NotFoundSearches from '@components/UI/NoFoundSearches';
+import Layout from '../components/UI/Layout';
+import NotFoundSearches from '../components/UI/NoFoundSearches';
 
 const NotFound = () =>(
   <Layout page="Login" color="gradient" justify="justify-flex">

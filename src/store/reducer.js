@@ -1,5 +1,5 @@
-import {ADD_TO_MYLIST, REMOVE_FROM_MYLIST, SEARCH_A_MEDIA, SET_CATEGORIES_STORE, FIND_VIDEO, UNSET_VIDEO} from '@store/actionTypes';
-import {saveMyList} from '@utils/localStorage';
+import {ADD_TO_MYLIST, REMOVE_FROM_MYLIST, SEARCH_A_MEDIA, SET_CATEGORIES_STORE, FIND_VIDEO, UNSET_VIDEO} from './actionTypes';
+import {saveMyList} from '../utils/localStorage';
 
 const reducer = (state, action) =>{
   const { myList:{ playlist }} = state;

@@ -4,40 +4,17 @@
   "description": "Version 2.0 de Platzi-Video",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve",
-    "dev": "webpack"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "keywords": [
     "Platzi-Video",
     "React.js",
-    "webpack"
+    "Vite.js"
   ],
   "author": "Orlando Mendoza <ommv.17@gmail.com>",
   "license": "MIT",
-  "devDependencies": {
-    "@babel/core": "7.13.14",
-    "@babel/plugin-proposal-class-properties": "7.13.0",
-    "@babel/plugin-transform-runtime": "7.13.10",
-    "@babel/preset-env": "7.13.12",
-    "@babel/preset-react": "7.13.13",
-    "babel-loader": "8.2.2",
-    "clean-webpack-plugin": "3.0.0",
-    "copy-webpack-plugin": "8.1.0",
-    "css-loader": "5.2.0",
-    "file-loader": "6.2.0",
-    "html-loader": "2.1.2",
-    "html-webpack-plugin": "5.3.1",
-    "mini-css-extract-plugin": "1.4.0",
-    "node-sass": "5.0.0",
-    "redux-devtools-extension": "2.13.9",
-    "redux-logger": "3.0.6",
-    "sass-loader": "11.0.1",
-    "style-loader": "2.0.0",
-    "url-loader": "4.1.1",
-    "webpack": "5.28.0",
-    "webpack-cli": "4.6.0",
-    "webpack-dev-server": "3.11.2"
-  },
   "dependencies": {
     "prop-types": "15.7.2",
     "react": "17.0.2",
@@ -46,5 +23,14 @@
     "react-router": "5.2.0",
     "react-router-dom": "5.2.0",
     "redux": "4.0.5"
+  },
+  "devDependencies": {
+    "@types/react": "18.0.17",
+    "@types/react-dom": "18.0.6",
+    "@vitejs/plugin-react": "2.1.0",
+    "node-sass": "5.0.0",
+    "redux-devtools-extension": "2.13.9",
+    "redux-logger": "3.0.6",
+    "vite": "3.1.0"
   }
 }

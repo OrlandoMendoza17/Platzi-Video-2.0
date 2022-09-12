@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import Layout from '@components/UI/Layout';
-import FormatForm from '@components/Forms/FormatForm';
-import SigninForm from '@components/Forms/SigninForm';
+import Layout from '../components/UI/Layout';
+import FormatForm from '../components/Forms/FormatForm';
+import SigninForm from '../components/Forms/SigninForm';
 
 class Signin extends Component{
   state = {

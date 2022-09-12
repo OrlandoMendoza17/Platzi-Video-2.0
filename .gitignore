@@ -4,3 +4,4 @@ node_modules
 src/assets/images/pikachu*
 .vscode/
 categories.json
+vite-project/

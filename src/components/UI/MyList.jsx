@@ -1,5 +1,5 @@
 import React from 'react';
-import Category from '@components/UI/Category';
+import Category from '../../components/UI/Category';
 
 const MyList = ({myList}) =>(
   <>

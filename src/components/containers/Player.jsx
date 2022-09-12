@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import Layout from '@components/UI/Layout';
+import Layout from '../../components/UI/Layout';
 import Button from '../widgets/Button';
 import {withRouter} from 'react-router';
 import {connect} from 'react-redux';
-import NotFound from '@pages/NotFound';
+import NotFound from '../../pages/NotFound';
 import {findVideo, unsetVideo, setCategoriesStore} from '../../store/actions';
 import {getCategories} from '../../utils/Api';
 

@@ -1,30 +1,30 @@
-import React, {useState, useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Home from '@pages/Home';
-import Login from '@pages/Login';
-import Signin from '@pages/Signin';
-import NotFound from '@pages/NotFound';
-import {connect} from 'react-redux';
-import {setCategoriesStore} from './store/actions';
-import Player from '@components/containers/Player';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import Signin from './pages/Signin';
+import NotFound from './pages/NotFound';
+import { connect } from 'react-redux';
+import { setCategoriesStore } from './store/actions';
+import Player from './components/containers/Player';
 
-const App = ({dispatch, ...store}) =>{
-  
+const App = ({ dispatch, ...store }) => {
+
   // const [categories, setCategories] = useState([])
-  
+
   useEffect(() => {
-    
+
     fetch('http://localhost:3000/initalState')
       .then(response => response.json())
       .then(data => {
         dispatch(setCategoriesStore(data))
       })
-    
+
   }, [])
 
   // console.log(categories)
-  
-  return(
+
+  return (
     <Router>
       <Switch>
         <Route exact path='/'>
@@ -39,7 +39,7 @@ const App = ({dispatch, ...store}) =>{
   )
 }
 
-const mapStateToProps = ({search, myList, categories}) =>({
+const mapStateToProps = ({ search, myList, categories }) => ({
   search,
   myList,
   categories,

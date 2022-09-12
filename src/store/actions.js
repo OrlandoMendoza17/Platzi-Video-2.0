@@ -1,4 +1,4 @@
-import {ADD_TO_MYLIST, REMOVE_FROM_MYLIST, SEARCH_A_MEDIA, SET_CATEGORIES_STORE, FIND_VIDEO, UNSET_VIDEO} from '@store/actionTypes';
+import {ADD_TO_MYLIST, REMOVE_FROM_MYLIST, SEARCH_A_MEDIA, SET_CATEGORIES_STORE, FIND_VIDEO, UNSET_VIDEO} from './actionTypes';
 
 export const addMedia = (media) =>{
   return {

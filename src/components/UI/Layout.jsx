@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from '@components/widgets/Header';
-import Footer from '@components/widgets/Footer';
+import Header from '../../components/widgets/Header';
+import Footer from '../../components/widgets/Footer';
 import PropTypes from 'prop-types';
 
 const Layout = ({page, color, children, justify}) =>(

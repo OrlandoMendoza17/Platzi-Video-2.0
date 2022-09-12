@@ -1,6 +1,6 @@
 import React from 'react';
-import Input from '@components/widgets/Input';
-import SubmitButton from '@components/widgets/SubmitButton';
+import Input from '../../components/widgets/Input';
+import SubmitButton from '../../components/widgets/SubmitButton';
 import PropTypes from 'prop-types';
 
 const SigninForm = ({handleChange, handleSubmit, handleInvalid, form}) =>(
