@@ -1,82 +1,70 @@
-import React, {Component} from 'react';
+import React, { useEffect, useContext} from 'react';
 import Layout from '../../components/UI/Layout';
 import Button from '../widgets/Button';
-import {withRouter} from 'react-router';
-import {connect} from 'react-redux';
+import { withRouter } from 'react-router';
 import NotFound from '../../pages/NotFound';
-import {findVideo, unsetVideo, setCategoriesStore} from '../../store/actions';
-import {getCategories} from '../../utils/Api';
+import { getCategories } from '../../utils/Api';
+import AppContext from '../../context/AppContext';
 
-class Player extends Component {
-  
-  componentDidMount(){
-    const { player, categories, findVideo, match } = this.props
+const Player = (props) => {
+
+  const { findVideo, unsetVideo, setCategoriesStore } = useContext(AppContext)
+  const { player, categories } = useContext(AppContext).state
+
+  useEffect(() => {
+    const { match } = props
     const videoId = match.params.id
     // console.log(videoId)
     const thereAreCategories = !!categories.length
     const isVideo = !!Object.keys(player).length
-    
-    debugger
-    
-    if(thereAreCategories && !isVideo){
-      
+
+    // debugger
+
+    if (thereAreCategories && !isVideo) {
+
       console.log('there are')
       findVideo(videoId)
-      
-    }else if(!isVideo){
+
+    } else if (!isVideo) {
       console.log('there are not')
-      this.fetchCategories(videoId)
+      fetchCategories(videoId)
     }
-  }
-    
-  fetchCategories = async (videoId) =>{
-    const { findVideo, setCategoriesStore } = this.props
+  }, [])
+
+  const fetchCategories = async (videoId) => {
     const categories = await getCategories()
     console.log('hola')
     setCategoriesStore(categories)
-    debugger
+    // debugger
     findVideo(videoId)
   }
-  
-  goBack = () =>{
-    const {unsetVideo, history} = this.props
+
+  const goBack = () => {
+    const { history } = props
     unsetVideo()
     history.goBack()
   }
-  
-  render(){
-    
-    const {player, history} = this.props
-    const isVideo = !!Object.keys(player).length
-    console.log(player)
-    return(
-      isVideo 
-        ? <Layout>
-            <div className="Player">
-              <video poster={player.image} className="Player__video" autoPlay controls>
-                <source src={player.source}/>
-              </video>
-              <div className="Player__back">
-                <Button handleClick={this.goBack} type="bold">
-                  Regresar
-                </Button>
-              </div>
-            </div>
-          </Layout> 
-        : 
-          <NotFound/>
-    )
-  }
+
+  const isVideo = !!Object.keys(player).length
+  console.log(player)
+
+  return (
+    isVideo
+      ? <Layout>
+        <div className="Player">
+          <video poster={player.image} className="Player__video" autoPlay controls>
+            <source src={player.source} />
+          </video>
+          <div className="Player__back">
+            <Button handleClick={goBack} type="bold">
+              Regresar
+            </Button>
+          </div>
+        </div>
+      </Layout>
+      :
+      <NotFound />
+  )
 }
 
-const mapStateToProps = ({player, categories}) =>({
-  player, categories
-})
-
-const mapDispatchToProps = {
-  findVideo,
-  unsetVideo,
-  setCategoriesStore,
-}
-
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Player));
+export default withRouter(Player);

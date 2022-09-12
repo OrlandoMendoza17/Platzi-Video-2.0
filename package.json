@@ -1,36 +1,24 @@
 {
-  "name": "platzi-video-2.0",
-  "version": "1.0.0",
-  "description": "Version 2.0 de Platzi-Video",
-  "main": "index.js",
+  "name": "vite-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
-  "keywords": [
-    "Platzi-Video",
-    "React.js",
-    "Vite.js"
-  ],
-  "author": "Orlando Mendoza <ommv.17@gmail.com>",
-  "license": "MIT",
   "dependencies": {
-    "prop-types": "15.7.2",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-redux": "7.2.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-router": "5.2.0",
-    "react-router-dom": "5.2.0",
-    "redux": "4.0.5"
+    "react-router-dom": "5.2.0"
   },
   "devDependencies": {
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",
     "@vitejs/plugin-react": "2.1.0",
-    "node-sass": "5.0.0",
-    "redux-devtools-extension": "2.13.9",
-    "redux-logger": "3.0.6",
+    "sass": "^1.54.9",
     "vite": "3.1.0"
   }
 }

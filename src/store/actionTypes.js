@@ -1,6 +1,0 @@
-export const ADD_TO_MYLIST = 'ADD_TO_MYLIST';
-export const REMOVE_FROM_MYLIST = 'REMOVE_FROM_MYLIST';
-export const SEARCH_A_MEDIA = 'SEARCH_A_MEDIA';
-export const SET_CATEGORIES_STORE = 'SET_CATEGORIES_STORE';
-export const FIND_VIDEO = 'FIND_VIDEO';
-export const UNSET_VIDEO = 'UNSET_VIDEO';

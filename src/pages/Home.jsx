@@ -1,36 +1,51 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import Searcher from '../components/widgets/Searcher';
 import Layout from '../components/UI/Layout';
 import MyList from '../components/UI/MyList';
 import Categories from '../components/UI/Categories';
 import Searches from '../components/UI/Searches';
 import NotFoundSearches from '../components/UI/NoFoundSearches';
+import AppContext from '../context/AppContext';
 // import PropTypes from 'prop-types';
 
-const Home = ({search, myList, categories}) =>{
-  return(
+const Home = () => {
+  const { state, setCategoriesStore } = useContext(AppContext)
+  const { search, myList, categories } = state
+
+  useEffect(() => {
+
+    fetch('http://localhost:3000/initalState')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        setCategoriesStore(data.categories)
+      })
+
+  }, [])
+  
+  return (
     <Layout color="purple">
-      <Searcher/>
+      <Searcher />
       {
-        search.input?
-          (search.playlist.length > 0)?
-          <Searches {...search}/>
+        search.input ?
+          (search.playlist.length > 0) ?
+            <Searches {...search} />
             :
-          <NotFoundSearches>
-            No se encontraron resultados :(
-          </NotFoundSearches>
-        :
+            <NotFoundSearches>
+              No se encontraron resultados :(
+            </NotFoundSearches>
+          :
           <>
-            <MyList myList={myList}/>      
-            <Categories categories={categories}/>
+            <MyList myList={myList} />
+            <Categories categories={categories} />
           </>
-      }  
+      }
     </Layout>
   )
 }
 
 // Home.propTypes = {
-  
+
 // }
 
 // const mapStateToProps = ({search, myList, categories}) =>({
@@ -38,7 +53,5 @@ const Home = ({search, myList, categories}) =>{
 //   myList,
 //   categories,
 // })
-
-// export default connect(mapStateToProps)(Home);
 
 export default Home;
